@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+  background-color: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+}
+
+button, 
+summary {
+  cursor: pointer;
+}
+
+summary::marker {
+  content: '';
+  display: none;
+}

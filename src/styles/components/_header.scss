@@ -1,0 +1,159 @@
+// ---------- header ----------
+.header {
+  .content {
+    min-height: 68px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include screen-1024 {
+    display: none;
+  }
+}
+
+// ---------- logo ----------
+.logo img {
+  width: auto;
+  height: 64px;
+  @include screen-1100 {
+    height: 52px;
+  }
+}
+
+// ---------- nav ----------
+.nav {
+  display: flex;
+  gap: 32px;
+  @include screen-1440 {
+    gap: 26px;
+  }
+  @include screen-1280 {
+    gap: 20px;
+  }
+  @include screen-1100 {
+    gap: 16px;
+  }
+  a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    &:hover {
+      color: var(--blue);
+    }
+  }
+}
+
+// ---------- login ----------
+.login {
+  display: flex;
+  gap: 8px;
+  .btn {
+    font-size: 14px;
+    @include screen-1280 {
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+  }
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+// ---------- header-mobile ----------
+.header-mobile {
+  display: none;
+  @include screen-1024 {
+    display: block;
+  }
+  .content {
+    @include screen-1024 {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+// ---------- overlay ----------
+.overlay {
+  display: none;
+  @include screen-1024 {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black_transparent);
+    transition: all .5s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    &_active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+// ---------- mobile-menu ----------
+
+.mobile-menu {
+  display: none;
+  @include screen-1024 {
+    width: 450px;
+    min-height: 100vh;
+    margin-left: auto;
+    background-color: var(--purple1);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all .5s;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    @include screen-768 {
+      width: 100vw;
+    }
+    &_active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  .icon {
+    align-self: end;
+    margin-top: -6px;
+    margin-right: -6px;
+  }
+  .login {
+    margin-top: auto;
+    .btn {
+      width: 50%;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+// ---------- nav-mobile ----------
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 42px;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}

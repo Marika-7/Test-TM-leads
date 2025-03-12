@@ -1,0 +1,42 @@
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  @include screen-1024 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -4%;
+  text-transform: uppercase;
+  @include screen-1280 {
+    font-size: 52px;
+  }
+  @include screen-1024 {
+    font-size: 35px;
+    line-height: 44px;
+  }
+}
+
+h2 {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 56px;
+  letter-spacing: -4%;
+  text-transform: uppercase;
+  @include screen-1024 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}

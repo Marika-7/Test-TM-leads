@@ -1,0 +1,88 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// .main {}
+
+.dark {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.light {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.purple {
+  background-color: var(--purple1);
+}
+
+// .section {}
+
+.content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 0px;
+  @include screen-1440 {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  @include screen-1280 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  @include screen-1100 {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  @include screen-1024 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  @include screen-768 {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+.conner {
+  position: relative;
+  &::after {
+    content: '';
+    width: 60px;
+    height: 60px;
+    border-top: 30px solid var(--dark);
+    border-right: 30px solid var(--dark);
+    border-left: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.border {
+  width: 40vw;
+  height: 60px;
+  background-color: var(--white);
+  @include screen-1024 {
+    width: 60vw;
+    height: 24px;
+  }
+}
+
+.border.conner::after {
+  @include screen-1024 {
+    width: 16px;
+    height: 24px;
+    border-top-width: 12px;
+    border-right-width: 8px;
+    border-left-width: 8px;
+    border-bottom-width: 12px;
+  }
+}
+

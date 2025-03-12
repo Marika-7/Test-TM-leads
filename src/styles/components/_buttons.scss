@@ -1,0 +1,32 @@
+.btn {
+  height: 52px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 11px 24px;
+  background-color: var(--blue);
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  transition: all .3s;
+  &:hover {
+    background-color: var(--blue_hover);
+    border-color: var(--blue);
+  }
+//   &:active {}
+//   &:disabled {
+//     opacity: 0.5;
+//   }
+}
+
+.btn-dark {
+  border-color: var(--blue);
+  background-color: var(--blue_transparent);
+  color: var(--blue);
+  &:hover {
+    background-color: var(--blue_hover);
+    color: var(--dark);
+  }
+}
